@@ -1,0 +1,95 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 84% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 0 84% 57%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 57%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 84% 57%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-racing-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-racing-red rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-racing-red/80;
+  }
+}
+
+@layer components {
+  .racing-card {
+    @apply bg-card rounded-lg border border-racing-red/20 p-6 transition-all duration-300 
+           hover:shadow-lg hover:shadow-racing-red/20 hover:-translate-y-1;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-racing text-racing-red font-bold mb-8 relative;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply block w-20 h-1 bg-racing-red mt-2;
+  }
+
+  .btn-racing {
+    @apply px-6 py-3 bg-racing-red text-white rounded-md font-bold
+           transition-all duration-300 hover:bg-racing-red/80 hover:shadow-lg hover:shadow-racing-red/30;
+  }
+  
+  .parallax-container {
+    @apply overflow-hidden relative;
+  }
+}
