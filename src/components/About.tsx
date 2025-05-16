@@ -41,7 +41,7 @@ const About = () => {
               <div className="absolute -inset-1 bg-racing-red/30 rounded-lg blur-lg animate-pulse-glow"></div>
               <Card className="relative bg-card border-0 overflow-hidden rounded-lg">
                 <img
-                  src="/public/ghibli-portfolio-anime.png"
+                  src="/ghibli-portfolio-anime.png"
                   alt="Developer"
                   className="w-full h-auto object-cover rounded-lg"
                 />
