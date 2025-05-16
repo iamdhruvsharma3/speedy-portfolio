@@ -23,7 +23,7 @@ const Projects = () => {
       category: "Web App",
       image: "",
       description:
-        "A responsive React app that lets users upload tracks and receive instant AI-powered mixing and mastering.",
+        "A fully responsive web application built with React that enables users to upload their audio tracks and instantly receive professionally mixed and mastered versions powered by AI. The platform leverages advanced audio processing algorithms to deliver studio-quality sound enhancements within seconds, eliminating the need for manual editing or expensive production tools. Designed with user experience in mind, the app offers a seamless interface for musicians, podcasters, and creators to enhance their audio with just a few clicks—anytime, anywhere.",
       technologies: ["Next.js", "Tailwind CSS", "FastAPI"],
       demo: "#",
       code: "#",
@@ -32,7 +32,8 @@ const Projects = () => {
       title: "NexusFlow",
       category: "Platform",
       image: "",
-      description: "",
+      description:
+        "Developed a comprehensive admin dashboard for NexusFlow that provides secure access to data analytics and streamlined control over ETL (Extract, Transform, Load) processes. The dashboard enables administrators to monitor data pipelines, trigger ETL jobs, and view real-time analytics through intuitive visualizations and dynamic filters. Designed with scalability and usability in mind, the interface supports role-based access control, audit logging, and efficient data exploration, making it easier for teams to manage and operationalize their data workflows.",
       technologies: ["TypeScript", "React", "Tailwind CSS", "ShadCN UI"],
       demo: "#",
       code: "#",
@@ -41,7 +42,8 @@ const Projects = () => {
       title: "Tech Intranet",
       category: "Web App",
       image: "",
-      description: "",
+      description:
+        "developed a dynamic, responsive Culture Page for CARS24 that authentically reflects the company’s values, work environment, and team spirit. The page features interactive sections such as employee spotlights, leadership quotes, behind-the-scenes event highlights, and DEI (Diversity, Equity & Inclusion) initiatives—brought to life with smooth animations and engaging layouts. Built using Next.js and Tailwind CSS, and integrated with a headless CMS, the page allows non-technical teams to update content effortlessly. The architecture supports modular content blocks, lazy-loaded media, and SEO-optimized rendering, ensuring fast performance and scalability. This project plays a key role in employer branding, recruitment, and internal engagement.",
       technologies: ["Next.js", "Tailwind CSS"],
       demo: "#",
       code: "#",
