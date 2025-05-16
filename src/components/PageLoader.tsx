@@ -23,7 +23,7 @@ const PageLoader: React.FC<PageLoaderProps> = ({ isLoading }) => {
     if (isLoading) {
       setShowLoader(true);
       let startTime = Date.now();
-      const duration = 3000;
+      const duration = 1500;
 
       const timer = setInterval(() => {
         const elapsedTime = Date.now() - startTime;

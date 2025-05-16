@@ -51,21 +51,8 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 mb-4 md:mb-0">
-            © {currentYear} Speed Dev. All rights reserved.
+            © {currentYear} Dhruv Sharma. All rights reserved.
           </p>
-
-          <div className="flex items-center gap-4">
-            <a
-              href="#"
-              className="text-gray-400 hover:text-racing-red transition-colors duration-300">
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-racing-red transition-colors duration-300">
-              Terms of Service
-            </a>
-          </div>
         </div>
       </div>
     </footer>

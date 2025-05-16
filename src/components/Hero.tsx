@@ -49,7 +49,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-5xl md:text-7xl font-racing text-white leading-tight mb-6">
-            RACING TOWARDS The <br />
+            RACING TOWARDS THE <br />
             <span className="text-racing-red">PERFECT CODE</span>
           </motion.h1>
 
