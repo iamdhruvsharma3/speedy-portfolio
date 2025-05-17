@@ -53,7 +53,14 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button className="btn-racing">Resume</Button>
+          <Button asChild className="btn-racing">
+            <a
+              href="https://drive.google.com/file/d/1Nw47OTP7WvsTsSkjfI0Y7iYgPjOWPwWA/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer">
+              Resume
+            </a>
+          </Button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -105,7 +112,14 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="btn-racing">Resume</Button>
+            <Button asChild className="btn-racing">
+              <a
+                href="https://drive.google.com/file/d/1Nw47OTP7WvsTsSkjfI0Y7iYgPjOWPwWA/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer">
+                Resume
+              </a>
+            </Button>
           </div>
         </div>
       )}

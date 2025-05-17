@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, CirclePlay } from "lucide-react";
+import { ArrowRight, CirclePlay } from "lucide-react";
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -11,42 +11,38 @@ const Projects = () => {
     {
       title: "Bharat RTO",
       category: "Web App",
-      image: "",
+      image: "/brto.png",
       description:
-        "Bharat RTO - Vehicle Info & Management App is one-stop solution for managing RTO vehicle information, challan information, all car and bike information, RC status, bike and car insurance, mParivahan, pollution expiry, digilocker for documents, driving license, owner details, personal car garage management, calculate your car's expected selling price using sell calculator and more. With a focus on convenience and reliability, Bharat RTO app aims to enhance the vehicle ownership experience. From checking Parivahan details to managing car and bike information, the app helps you stay up to date with your vehicle's status and renewals.",
+        "Bharat RTO - Vehicle Info & Management App is a one-stop solution for managing RTO vehicle information, challan details, car/bike info, RC status, insurance, mParivahan, pollution expiry, digilocker for documents, and more.",
       technologies: ["React", "Tailwind CSS", "Zustand", "Rest APIs"],
       demo: "#",
-      code: "#",
     },
     {
       title: "MixGenius AI",
       category: "Web App",
-      image: "",
+      image: "/mixgenius.png",
       description:
-        "A fully responsive web application built with React that enables users to upload their audio tracks and instantly receive professionally mixed and mastered versions powered by AI. The platform leverages advanced audio processing algorithms to deliver studio-quality sound enhancements within seconds, eliminating the need for manual editing or expensive production tools. Designed with user experience in mind, the app offers a seamless interface for musicians, podcasters, and creators to enhance their audio with just a few clicks—anytime, anywhere.",
+        "A responsive web app where users upload audio tracks to get instant AI-powered mixing and mastering results. Designed for creators, musicians, and podcasters seeking studio-quality sound in seconds.",
       technologies: ["Next.js", "Tailwind CSS", "FastAPI"],
-      demo: "#",
-      code: "#",
+      demo: "https://mixgenius.netlify.app/",
     },
     {
       title: "NexusFlow",
       category: "Platform",
-      image: "",
+      image: "/nexusflow.png",
       description:
-        "Developed a comprehensive admin dashboard for NexusFlow that provides secure access to data analytics and streamlined control over ETL (Extract, Transform, Load) processes. The dashboard enables administrators to monitor data pipelines, trigger ETL jobs, and view real-time analytics through intuitive visualizations and dynamic filters. Designed with scalability and usability in mind, the interface supports role-based access control, audit logging, and efficient data exploration, making it easier for teams to manage and operationalize their data workflows.",
+        "Admin dashboard to manage and monitor ETL processes and real-time analytics. Features include role-based access control, dynamic filters, visualizations, and secure data handling.",
       technologies: ["TypeScript", "React", "Tailwind CSS", "ShadCN UI"],
       demo: "#",
-      code: "#",
     },
     {
       title: "Tech Intranet",
       category: "Web App",
-      image: "",
+      image: "/techintranet.png",
       description:
-        "developed a dynamic, responsive Culture Page for CARS24 that authentically reflects the company’s values, work environment, and team spirit. The page features interactive sections such as employee spotlights, leadership quotes, behind-the-scenes event highlights, and DEI (Diversity, Equity & Inclusion) initiatives—brought to life with smooth animations and engaging layouts. Built using Next.js and Tailwind CSS, and integrated with a headless CMS, the page allows non-technical teams to update content effortlessly. The architecture supports modular content blocks, lazy-loaded media, and SEO-optimized rendering, ensuring fast performance and scalability. This project plays a key role in employer branding, recruitment, and internal engagement.",
+        "Developed an internal culture page for CARS24 featuring employee highlights, leadership quotes, events, and DEI initiatives. Integrated with headless CMS and built for performance.",
       technologies: ["Next.js", "Tailwind CSS"],
       demo: "#",
-      code: "#",
     },
   ];
 
@@ -126,14 +122,20 @@ const Projects = () => {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <Button
-                      variant="outline"
-                      className="flex items-center gap-2 bg-transparent border border-racing-red text-racing-red hover:bg-racing-red/10">
-                      <Code size={14} /> Code
-                    </Button>
-                    <Button className="flex items-center gap-2 bg-racing-red text-white hover:bg-racing-red/80">
-                      <CirclePlay size={14} /> Live Demo
-                    </Button>
+                    {project.title === "MixGenius AI" ? (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <Button className="flex items-center gap-2 bg-racing-red text-white hover:bg-racing-red/80">
+                          <CirclePlay size={14} /> Live Demo
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button className="flex items-center gap-2 bg-racing-red text-white hover:bg-racing-red/80">
+                        <ArrowRight size={14} /> View Case Study
+                      </Button>
+                    )}
                   </div>
                 </div>
               </Card>

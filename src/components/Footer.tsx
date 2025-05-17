@@ -1,5 +1,16 @@
 import React from "react";
-import { Code, Home, User, Mail, Phone, Briefcase } from "lucide-react";
+import {
+  Code,
+  Home,
+  User,
+  Mail,
+  Phone,
+  Briefcase,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+} from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,9 +25,26 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "GitHub", href: "#", icon: "github.svg" },
-    { name: "LinkedIn", href: "#", icon: "linkedin.svg" },
-    { name: "Twitter", href: "#", icon: "twitter.svg" },
+    {
+      icon: <Github size={20} />,
+      url: "https://github.com/iamdhruvsharma3",
+      label: "GitHub",
+    },
+    {
+      icon: <Linkedin size={20} />,
+      url: "https://www.linkedin.com/in/dhruvsharma0311/",
+      label: "LinkedIn",
+    },
+    {
+      icon: <Twitter size={20} />,
+      url: "https://x.com/ursdhruvsharma",
+      label: "Twitter",
+    },
+    {
+      icon: <Instagram size={20} />,
+      url: "https://www.instagram.com/dhruvshxrmaa/",
+      label: "Instagram",
+    },
   ];
 
   return (
@@ -53,6 +81,20 @@ const Footer = () => {
           <p className="text-gray-400 mb-4 md:mb-0">
             © {currentYear} Dhruv Sharma. All rights reserved.
           </p>
+
+          <div className="flex items-center space-x-4">
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.label}
+                className="text-gray-400 hover:text-travis-orange transition-colors duration-300">
+                {link.icon}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
