@@ -132,8 +132,11 @@ const Projects = () => {
                         </Button>
                       </a>
                     ) : (
-                      <Button className="flex items-center gap-2 bg-racing-red text-white hover:bg-racing-red/80">
-                        <ArrowRight size={14} /> View Case Study
+                      <Button
+                        disabled
+                        className="flex items-center gap-2 bg-racing-red/50 text-white cursor-not-allowed"
+                        title="Case study is in progress">
+                        <ArrowRight size={14} /> Case Study in Progress
                       </Button>
                     )}
                   </div>
@@ -143,11 +146,11 @@ const Projects = () => {
           ))}
         </motion.div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Button className="btn-racing">
             View All Projects <ArrowRight size={16} className="ml-2" />
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
